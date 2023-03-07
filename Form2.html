@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>form</title>
+    <style>
+        .title{
+            width: 70px;
+        }
+    </style>
 </head>
 <body>
 <form action="" mothod="push">
   <table>
     <tr>
-      <th><h1>ĐĂNG KÝ HỌC VIÊN</h1></th>
+      <th colspan="2"><h3>ĐĂNG KÝ HỌC VIÊN</h3></th>
     </tr>
-
+      <tr>
+          <td class="title">Họ và tên</td>
+          <td>
+              <input type="text" name="Họ và tên" size="20px">
+          </td>
+      </tr>
+      <tr>
+          <td class="title">Ngày sinh</td>
+          <td>
+              <input type="text" name="Ngày sinh" size="10px">
+          </td>
+      </tr>
+      <tr>
+          <td class="title">Giới tính</td>
+          <td>
+              <input type="radio" name="Nam">Nam
+              <input type="radio" name="Nữ">Nữ
+          </td>
+      </tr>
+      <tr>
+          <td class="title"> Địa chỉ</td>
+          <td><textarea name="" id="" cols="30" rows="3"></textarea></td>
+      </tr>
+      <tr>
+          <td class="title">Lớp</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td class="title">Email</td>
+          <td>
+              <input type="text" name="Email" size="15px">
+          </td>
+      </tr>
+      <tr>
+          <td class="title">Điện Thoại</td>
+          <td>
+              <input type="text" name="Điện thoại" size="15px">
+          </td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>
+              <button type="submit">Đăng ký</button>
+              <button type="reset">Nhập lại</button>
+          </td>
+      </tr>
 
   </table>
 </form>
