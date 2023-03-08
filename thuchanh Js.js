@@ -1,3 +1,3 @@
 function showmessage() {
-    document.getElementById('messagediv').innerHTML ='xin chào'
+    document.getElementById('showmessage').innerHTML ='xin chào'
 }
