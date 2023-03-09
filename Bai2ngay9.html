@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+
+</head>
+<body>
+  <table >
+    <tr>
+      <th>Amount</th>
+      <th style="padding-right:10px; padding-left: 10px">From Currency</th>
+      <th >To Currency</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text"id="VND">
+      </td>
+      <td style="padding-right:10px; padding-left: 10px">
+        <select id="From Currency">
+          <option value="VND">VND</option>
+          <option value="USD">USD</option>
+        </select>
+      </td>
+      <td>
+        <select id="To Currency">
+          <option value="USD">USD</option>
+          <option value="VND">VND</option>
+        </select>
+      </td>
+      <td>
+          <button type="button" onclick="convert();">convert</button>
+      </td>
+    </tr>
+  </table>
+  <script>
+    function convert() {
+        let a= +document.getElementById('VND').value
+        let b= +document.getElementById('USD').value
+        let c= +document.getElementById('VND').value
+      if (b=="USD"&& c=="VND" ) {
+        a*=23500
+        document.write('a='+VND);
+      } else if(b=="VND" && c=="USD") {
+        a/=23500
+        document.write('a='+USD);
+      }else if(b=="VND"&&c=="VND"){
+        a=a
+        document.write('a='+VND);
+      }
+      else{
+        a=a
+        document.write('a='+USD)
+      }
+    }
+  </script>
+</body>
+</html>
