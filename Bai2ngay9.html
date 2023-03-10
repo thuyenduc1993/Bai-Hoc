@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <td>
-        <input type="text"id="VND">
+        <input id="VND" type="aem">
       </td>
       <td style="padding-right:10px; padding-left: 10px">
         <select id="From Currency">
@@ -30,28 +30,29 @@
         </select>
       </td>
       <td>
-          <button type="button" onclick="convert();">convert</button>
+          <button type="button" onclick="trade();">convert</button>
       </td>
     </tr>
   </table>
+  <p id="result"></p>
   <script>
     function convert() {
-        let a= +document.getElementById('VND').value
-        let b= +document.getElementById('USD').value
-        let c= +document.getElementById('VND').value
+        let a= +document.getElementById("aem").value
+        let b= document.getElementById("From Currency").value
+        let c= document.getElementById("To Currency").value
       if (b=="USD"&& c=="VND" ) {
         a*=23500
-        document.write('a='+VND);
+        document.getElementById("result").innerHTML =a+'VND'
       } else if(b=="VND" && c=="USD") {
         a/=23500
-        document.write('a='+USD);
+        document.getElementById("result").innerHTML =a+'$'
       }else if(b=="VND"&&c=="VND"){
         a=a
-        document.write('a='+VND);
+        document.getElementById("result").innerHTML =a+'VND'
       }
       else{
         a=a
-        document.write('a='+USD)
+        document.getElementById("result").innerHTML =a+'USD'
       }
     }
   </script>
