@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bói tuổi</title>
+</head>
+<body>
+<h2>Xem bói</h2>
+<input type="number" id="tuổi nam">tuổi nam <br>
+<input type="number" id="tuổi nữ"> tuổi nữ <br> <br>
+<button onclick="boss();">kiểm tra</button>
+<script>
+  function boss() {
+    let a= document.getElementById("tuổi nam").value;
+    let b= document.getElementById("tuổi nữ").value;
+    let c=a-b;
+    if (c%3===0) {
+      document.getElementById("in ra màn hình").innerHTML="tứ hành sung";
+    } else if (c%4===0) {
+      document.getElementById("in ra màn hình").innerHTML="tam hợp";
+    } else document.getElementById("in ra màn hình").innerHTML = "bình thường";
+  }
+</script>
+<p id="in ra màn hình"></p><br>
+
+</body>
+</html>
