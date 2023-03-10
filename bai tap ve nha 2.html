@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền Điện</title>
+</head>
+<body>
+   <script>
+     let a=prompt("số điện");
+     let money;
+     if (a<50) {
+       money=a*1678;
+     } else if (a<100) {
+       money=(a-50)*1734 +(50*1678);
+     } else if (a<200) {
+         money=(a-100)*2014+(50*1734)+(50*1678);
+     } else if (a<300) {
+         money=(a-300)*2536+(100*2014)+(50*1734)+(50*1678);
+     } else if (a<400) {
+         money=(a-300)*2834+(200*2536)+(100*2014)+(50*1734)+(50*1678);
+     } else if (a>400) {
+         money=(a-300)*2927+(300*2834)+(200*2536)+(100*2014)+(50*1734)+(50*1678);
+     }
+     alert(money + "VND");
+   </script>
+
+</body>
+</html>
