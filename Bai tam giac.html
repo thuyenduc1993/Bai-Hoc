@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phan biệt tam giác</title>
+</head>
+<body>
+<h3 style="color: red"> Phấn biệt tam giác </h3><br>
+<p id="ra"></p>
+<img src="https://img.meta.com.vn/Data/image/2021/10/01/cong-thuc-cach-tinh-dien-tich-hinh-tam-giac-3.JPG" alt="Hình tam giác" sizes="0.5px">
+<br>
+    <table>
+        <input type="text" id="aa" name=" cạnh a" placeholder="cạnh =" size="10px" > <br><br>
+        <input  type="text" id="bb" name=" cạnh b" placeholder=" cạnh =" size=" 10px"><br><br>
+        <input type="text" id="cc" name=" cạnh c" placeholder=" cạnh =" size=" 10px"><br><br>
+        <button onclick="boss()">kểm tra</button>
+<!--        <input type="reset" size="">-->
+    </table>
+<script>
+    function boss() {
+        let a= document.getElementById("aa").value;
+        let b= document.getElementById("bb").value;
+        let c= document.getElementById("cc").value;
+        if ( a>0 && b> 0 && c>0 ) {
+            if (a===b || b===c || c===a) {
+                document.getElementById("ra").innerHTML="Tam giác đều";
+            } else if ( a*a === b*b+c*c || b*b===a*a+c*c||c*c=== a*a+b*b) {
+                document.getElementById("ra").innerHTML= "tam giác Vuông";
+            } else if ( a===b && b===c && c===a) {
+                document.getElementById("ra").innerHTML= "tam giác cân";
+            } else {
+                document.getElementById("ra").innerHTML= "tam giác thường";
+            }
+        }else {
+            document.getElementById("ra").innerHTML= "không phải tam giác";
+        }
+           
+    }
+</script>
+<br><br>
+
+</body>
+</html>

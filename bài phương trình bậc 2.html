@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải PT bậc 2</title>
+</head>
+<body>
+<h3>Giải Pt bậc 2</h3>
+    <input type="text" id="munbera" placeholder="a =">
+    <input type="text" id="munberb" placeholder="b =">
+    <input type="text" id="munberc" placeholder="c =">
+    <button onclick="abc()">calculate</button>
+<script>
+    function abc() {
+        let a= document.getElementById('munbera').value;
+        let b= document.getElementById('munberb').value;
+        let c= document.getElementById('munberc').value;
+        let x=b*b-4*a*c;
+
+        if (a!==0){
+
+            if (x<0) {
+                document.getElementById("test").innerHTML="vô nghiệm";
+            } else if (x===0) {
+                let x1=-(b/2*a);
+                document.getElementById("test").innerHTML= "x =" + x1 ;
+            }else if (x>0) {
+                let x2=(-b + Math.sqrt(x))/2*a;
+                let x3=(-b - Math.sqrt(x))/2*a;
+                document.getElementById("test").innerHTML= "x =" + x2 ;
+                document.getElementById("test1").innerHTML="x =" + x3 ;
+            }
+        } else if(a===0){
+            let x4=-c/b;
+            if ( b===0 && c!==0) {
+                document.getElementById("test").innerHTML= "vô nghiệm";
+            } else if (b!==0&&c===0) {
+                document.getElementById("test").innerHTML=  "x =" + x4 ;
+            }else if( b!==0 && c!==0) {
+                document.getElementById("test").innerHTML= "x =" + x4 ;
+            }else if(b===0 && c===0) {
+                document.getElementById("test").innerHTML= "vô số nghiệm";
+            }
+        }
+    }
+</script>
+<p id="test"></p>
+<p id="test1"></p>
+</body>
+</html>

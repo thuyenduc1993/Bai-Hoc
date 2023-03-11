@@ -10,49 +10,51 @@
     <tr>
       <th>Amount</th>
       <th style="padding-right:10px; padding-left: 10px">From Currency</th>
-      <th >To Currency</th>
+      <th >To urrency</th>
       <th></th>
     </tr>
     <tr>
       <td>
-        <input id="VND" type="aem">
+        <input id="boss" type="text" size="">
       </td>
-      <td style="padding-right:10px; padding-left: 10px">
-        <select id="From Currency">
+      <td style="padding-right:10px; padding-left: 10px" >
+        <select id="FromCurrency" name="From Currency">
           <option value="VND">VND</option>
           <option value="USD">USD</option>
         </select>
       </td>
       <td>
-        <select id="To Currency">
-          <option value="USD">USD</option>
+        <select id="ToCurrency" name="To Currency">
           <option value="VND">VND</option>
+          <option value="USD">USD</option>
         </select>
       </td>
       <td>
-          <button type="button" onclick="trade();">convert</button>
+        <button onclick="boss();">kiểm tra</button>
       </td>
     </tr>
   </table>
   <p id="result"></p>
   <script>
-    function convert() {
-        let a= +document.getElementById("aem").value
-        let b= document.getElementById("From Currency").value
-        let c= document.getElementById("To Currency").value
-      if (b=="USD"&& c=="VND" ) {
-        a*=23500
-        document.getElementById("result").innerHTML =a+'VND'
-      } else if(b=="VND" && c=="USD") {
-        a/=23500
-        document.getElementById("result").innerHTML =a+'$'
-      }else if(b=="VND"&&c=="VND"){
-        a=a
-        document.getElementById("result").innerHTML =a+'VND'
-      }
-      else{
-        a=a
-        document.getElementById("result").innerHTML =a+'USD'
+    function boss() {
+        let a=document.getElementById("boss").value;
+        let b=document.getElementById("FromCurrency").value;
+        let c=document.getElementById("ToCurrency").value;
+      //   console.log("a",a)
+      // console.log("b",b)
+      // console.log("c",c)
+      if (b==="VND" && c==="USD") {
+        let d=a/23500;
+        document.getElementById('result').innerHTML=d+"USD";
+      } else if (b==="USD" && c==="VND") {
+        let d=a*23500;
+        document.getElementById('result').innerHTML=d+"VND";
+      } else if (b==="USD" && c==="USD") {
+        let d=a ;
+        document.getElementById('result').innerHTML=d+"USD";
+      } else {
+        let d=a;
+        document.getElementById('result').innerHTML=d+"VND";
       }
     }
   </script>
