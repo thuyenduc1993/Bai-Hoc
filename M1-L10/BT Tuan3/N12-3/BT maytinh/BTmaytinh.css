@@ -1,0 +1,26 @@
+
+table {
+    margin: 0 auto; /* căn giữa bảng */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    cursor: pointer;
+}
