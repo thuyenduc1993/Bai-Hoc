@@ -1,4 +1,3 @@
-let imgplay = null;
 imgplay = document.getElementById("image");
 function init() {
     imgplay = document.getElementById("image");
