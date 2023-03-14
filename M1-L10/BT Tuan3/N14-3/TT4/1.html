@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let tabl;
+          tabl = "<table border='1' width='400' cellspacing='0' cellpadding='10'>";
+  for (i=1; i<=10; i++) {
+    tabl = tabl +'<br>';
+     for ( j = 1; j <=10 ; j++) {
+      tabl = tabl + "<td>" + i * j + "</td>"
+    }
+    tabl=tabl + '</tr>';
+  }
+  tabl=tabl +'</table>';
+  document.write(tabl);
+</script>
+<!--<script>-->
+<!--  let tabl,i,j;-->
+<!--  tabl = "<table border='1' width='400' cellspacing='0' cellpadding='10'>";-->
+<!--  i=j=1;-->
+<!--  while (i<=10) {-->
+<!--    tabl+='<br>';-->
+<!--    while (j<=10){-->
+<!--      tabl+='<td>'+i*j+'</td>'-->
+<!--      j++;-->
+<!--    }-->
+<!--    tabl+= '</tr>';-->
+<!--    j=1;-->
+<!--    i++;-->
+<!--  }-->
+<!--  tabl = tabl + "</table>";-->
+<!--  document.write(tabl);-->
+<!--</script>-->
+</body>
+</html>
