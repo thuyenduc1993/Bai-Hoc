@@ -15,9 +15,9 @@ function chech(){
             break;
         case 4:
         case 6:
-        case 9:g
+        case 9:
         case 11:
-            document.getElementById("result").innerHTML=`tháng${day}có 30 ngày`;
+            document.getElementById("result").innerHTML=`tháng ${day} có 30 ngày`;
             break;
         default:
             document.getElementById("result").innerHTML=`Không phải là một tháng trong năm`;

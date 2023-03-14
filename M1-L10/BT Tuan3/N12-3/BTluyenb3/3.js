@@ -1,8 +1,8 @@
 function result() {
     let number = document.getElementById('numbera').value;
       if (number >= 0) {
-        document.write(number+'lớn hơn không');
+        document.write(number+'số nguyên dương ');
     }else  {
-          document.write(number+'nhỏ hơn không');
+          document.write(number+'số nguyên âm');
     }
 }
