@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T2</title>
+</head>
+<body>
+<input id="sonhap" type="text" placeholder="nhập số">
+<button onclick="sum()">cleck me!</button>
+<p id="ed"></p>
+<script>
+    function sum(){
+        let num =document.getElementById("sonhap").value;
+        let total =0;
+        let  i = 1;
+        for ( i=1 ; i <=num ; i++ ) {
+            total = total +i;
+            document.getElementById("ed").innerHTML ='tổng các phần tử '+ total;
+        }
+    }
+</script>
+</body>
+</html>
