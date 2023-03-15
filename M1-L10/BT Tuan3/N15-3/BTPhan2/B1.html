@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a=0;
+  let b=1;
+  let fibo
+  let input =+prompt("nhập số cần lượng dãy số fibonac");
+  for (let i=0; i<input-2 ;i++){
+    fibo = a+b;
+    a=b;
+    b=fibo
+    document.write(`${fibo}`+'<br>')
+  }
+
+</script>
+</body>
+</html>
