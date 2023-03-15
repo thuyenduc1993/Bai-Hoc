@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tổng số fibonacc</title>
+</head>
+<body>
+  <script>
+    let a=0;
+    let b=1;
+    let sum=1;
+    let input = prompt('Nhap so luong day fibonacc ')
+    for (let i=0; i<18;i++) {
+        fibonacc =a+b
+        sum += fibonacc
+        a=b;
+        b=fibonacc;
+    }
+    document.write(`${sum} là tổng của dãy số fibonacc`)
+  </script>
+</body>
+</html>

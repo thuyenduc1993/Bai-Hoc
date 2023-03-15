@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiền chia hết cho 5 trong day fibonacc</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let fibonacc;
+    let input = +prompt('Nhap so luong day fibonacc ')
+    for ( let i =0;i <= input; i++) {
+        fibonacc = a + b
+        a = b
+        b = fibonacc
+        if (fibonacc % 5 === 0) {
+            document.write(`${fibonacc} là số đầu tiên chia hết cho 5`)
+            break
+        }
+    }
+</script>
+</body>
+</html>
