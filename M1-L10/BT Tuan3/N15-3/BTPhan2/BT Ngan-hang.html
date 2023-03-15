@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let so_tien_cho_vay = +prompt("nhập số tiền cho vay");
+    let so_thang_cho_vay = +prompt("nhâp số tháng cho vay");
+    let lai_xuat_hang_thang= +prompt("nhập lãi xuất cho vay");
+    let lai_suat_thang =( so_tien_cho_vay + lai_xuat_hang_thang)/100;
+    let lai_hang_thang =( so_tien_cho_vay * lai_suat_thang);
+    for (let thang =1;thang <so_thang_cho_vay; thang++ ) {
+        let tong_tien = ( so_tien_cho_vay + lai_hang_thang*so_thang_cho_vay)
+        document.write(tong_tien + '<br>');
+    }
+</script>
 </body>
 </html>
