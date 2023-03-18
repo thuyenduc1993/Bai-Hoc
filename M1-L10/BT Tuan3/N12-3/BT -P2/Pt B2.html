@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= +prompt('nhập số vào đây');
+    let b= +prompt('nhập số vào đây');
+    let c= +prompt('nhập số vào đây');
+    let x=b*b-4*a*c;
+
+    if (a!==0){
+
+      if (x<0) {
+        alert('Pt vô nghiệm')
+      } else if (x===0) {
+        let x1=-(b/2*a);
+        alert('Pt có nghiệm ' + x1) ;
+      }else if (x>0) {
+        let x2=(-b + Math.sqrt(x))/2*a;
+        let x3=(-b - Math.sqrt(x))/2*a;
+        alert(`Pt có 2 nghiệm ${x2}và ${x3}`)
+      }
+    } else if(a===0){
+      let x4=-c/b;
+      if ( b===0 && c!==0) {
+        alert('Pt vô nghiệm');
+      } else if (b!==0&&c===0) {
+        alert(`Pt có nghiệm ${x4}`);
+      }else if( b!==0 && c!==0) {
+        alert(`Pt có nghiệm ${x4}`);
+      }else if(b===0 && c===0) {
+        alert('Pt sô số nghiệm');
+      }
+    }
+
+</script>
+</body>
+</html>

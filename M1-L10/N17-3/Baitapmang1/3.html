@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let array = [1,22,12,45,76,34,55,75,89,23,2,4,6];
+  let max = array[0];
+  let sum = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > max) {
+      max = array[i];
+      sum +=array [i];
+    }
+  }
+  let tb =sum/array.length;
+document.write(`số lơn nhất ${max} và trung bình ${tb}`)
+
+</script>
+</body>
+</html>

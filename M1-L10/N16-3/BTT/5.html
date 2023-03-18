@@ -6,10 +6,25 @@
 </head>
 <body>
 <h3>Game caro</h3>
-<p id="caro"></p>
-<input type="button"id="Changevalue" onclick="Change Value()">
+<p id="result"></p>
+<input type="button"id="Changevalue" onclick="Changvalue()">
 <script>
+let a = document.getElementById('result');
+let caro = [];
+ for (let i =0; i < 10; i++ ){
+     caro[i] = new array (0,0,0,0,0,0,0,0,0,0)
+     document.getElementById("result").innerHTML += caro[i].join(' ') + '<br>'
+ }
+ function Changvalue() {
+     let x = +prompt("nhap hang");
+     let y = +prompt("nhap cot");
+     document.getElementById('result').innerHTML=""
+     Caro[x][y]= 'x'
+     for (let j = 0; i <10 ; i++) {
+         document.getElementById('result').innerHTML+=caro[i].join(' ') + '<br>'
+     }
 
+ }
 </script>
 
 </body>

@@ -5,17 +5,18 @@
     <title>Tìm số lớn nhất</title>
 </head>
 <body>
+<p id="ouput"></p>
 <script>
     let numbers = [-3, 5, 1, 3, 2, 10,15,7];
     let max = numbers[0]
     let index =0
     for ( let i = 0; i < numbers.length;i++) {
         if ( numbers[i] > max) {
-            max = numbers [i];
+            max += numbers [i];
             index = i
         }
     }
-    alert(`số lớn nhất là ${max} ở vị trí ${index}`)
+        document.getElementById('ouput').innerHTML=`số lớn nhất là ${max} ở vị trí ${index}`
 </script>
 </body>
 </html>

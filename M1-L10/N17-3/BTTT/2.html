@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2</title>
+</head>
+<body>
+<script>
+  let input = +prompt("nhập số vào đây");
+  let even = input[0];
+  let over=0
+  for (let i =0; i < even.length;i++){
+      if (input[i] %2 ===0 ) {
+          over+=input[i];
+          document.write("-"+ over)
+          over++
+      }else {
+          alert("không phải số chẵn")
+      }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị phần tử lớn nhất trong mảng</title>
+</head>
+<body>
+
+<script>
+  let array = [1,22,12,45,76,34,55,75,89,23,2,4];
+  let max = array [0];
+  let index = 0;
+  for (let i = 0; i < array.length; i++) {
+    if ( array[i] > max) {
+      max = array[i];
+      index =i
+    }
+  }
+  document.write(`số lớn nhất là ${max} ở vị trí ${index}`)
+</script>
+</body>
+</html>
