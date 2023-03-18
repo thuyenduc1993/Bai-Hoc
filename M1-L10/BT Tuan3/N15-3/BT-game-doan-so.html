@@ -7,15 +7,28 @@
 <body>
 <button onclick="Bd()">Bắt Đầu</button>
 <script>
-  function Bd() {
-    let SD = prompt("nhập vào số đầu tiên ");
-    let SC = prompt("nhập vào số cuối");
-    let SKT = prompt("nhập số đoán");
-    let SCĐON=
-    let guess=0
-    for
+    function Bd() {
+        let number = +prompt("nhập vào giới hạn số")
+        let numberrun = Math.floor(Math.random() * number);
+        let numbercheck = +prompt("nhập vào số bạn đoán")
+        let count = 0;
+        while (numbercheck !== numberrun) {
+            count++;
 
-  }
+            if (numbercheck < numberrun || numbercheck > numberrun) {
+                alert("số bạn đoán chưa đúng")
+            } else if (numberrun === numbercheck) {
+                alert("số bạn đoán đã đúng , chúc mừng")
+                break;
+            }
+            numbercheck = +prompt("nhập vào số bạn đoán")
+            if (count === 4) {
+                alert("bạn hết số lần đoán")
+                break;
+            }
+
+        }
+    }
 </script>
 </body>
 </html>

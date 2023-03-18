@@ -6,21 +6,19 @@
 </head>
 <body>
 <script>
-    let cunnt=0
-  let sum=0
-  let input =prompt("số nhập")
+  let sum=0;
+  let cunnt=0;
+  let input =prompt("số nhập");
   for ( let i=0; i<input;i++) {
       if (i%7===0){
-          sum+=i
-          cunnt++
+          sum+=i;
+          cunnt++;
       }
       if (cunnt===30){
-          document.write(`tổng của ${input} số dầu tiên chia hết cho 7 là ${sum}`)
+          document.write(`tổng của ${input} chia hết cho 7 là ${sum}`);
               break
       }
   }
-
-
 </script>
 </body>
 </html>
