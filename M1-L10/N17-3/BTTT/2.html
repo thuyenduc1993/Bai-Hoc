@@ -6,18 +6,28 @@
 </head>
 <body>
 <script>
-  let input = +prompt("nhập số vào đây");
-  let even = input[0];
-  let over=0
-  for (let i =0; i < even.length;i++){
-      if (input[i] %2 ===0 ) {
-          over+=input[i];
-          document.write("-"+ over)
-          over++
-      }else {
-          alert("không phải số chẵn")
+  // let input = +prompt("nhập số vào đây");
+  // let even = input[0];
+  // let over=0
+  // for (let i =0; i < even.length;i++){
+  //     if (input[i] %2 ===0 ) {
+  //         over+=input[i];
+  //         document.write("-"+ over)
+  //         over++
+  //     }else {
+  //         alert("không phải số chẵn")
+  //     }
+  // }
+  let input = prompt('STN')
+  let kt = input[0]
+  for (let i = 1; i < input.length; i++) {
+      if (input[i] %2 === 0 && input[i-1] % 2 === 0) {
+          kt += "-"
+
       }
+      kt +=input[i]
   }
+  document.write(kt)
 </script>
 </body>
 </html>
