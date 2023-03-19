@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Khởi tạo mảng số nguyên gồm 10 phần tử
+    const array = [10, 2, 5, 8, 3, 1, 7, 6, 9, 4];
+    // let max= array[0]
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i]>max){
+    //         max =array[i]
+    //     }
+    // }
+    // alert(max)
+    // Sắp xếp mảng theo thứ tự giảm dần
+    array.sort(function(a, b) {
+        return b - a ;
+    });
+
+    // Hiển thị mảng đã được sắp xếp
+    document.write(array);
+</script>
+</body>
+</html>
