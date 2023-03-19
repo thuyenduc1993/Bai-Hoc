@@ -7,24 +7,40 @@
 <body>
 <h3>Game caro</h3>
 <p id="result"></p>
-<input type="button"id="Changevalue" onclick="Changvalue()">
+<input type="button"id="Changevalue" onclick="Changvalue()" value="click">
 <script>
 let a = document.getElementById('result');
-let caro = [];
- for (let i =0; i < 10; i++ ){
-     caro[i] = new array (0,0,0,0,0,0,0,0,0,0)
-     document.getElementById("result").innerHTML += caro[i].join(' ') + '<br>'
+let currentPlayer = 'x'
+
+let caro =[];
+ for (let i =0; i < 3; i++ ){
+     caro[i] = ['.','.','.']
+     document.getElementById("result").innerHTML += caro[i].join('&nbsp&nbsp&nbsp') + '<br>'
  }
  function Changvalue() {
      let x = +prompt("nhap hang");
      let y = +prompt("nhap cot");
      document.getElementById('result').innerHTML=""
-     Caro[x][y]= 'x'
-     for (let j = 0; i <10 ; i++) {
-         document.getElementById('result').innerHTML+=caro[i].join(' ') + '<br>'
+     caro[x][y]= currentPlayer
+
+     if (currentPlayer === 'x') {
+         currentPlayer = '0'
+     } else {
+         currentPlayer = 'x'
+     }
+
+     for (let i = 0; i <3 ; i++) {
+         document.getElementById('result').innerHTML+=caro[i].join('&nbsp&nbsp&nbsp') + '<br>'
+     }
+
+     for (let i = 0; i < 3; i++) {
+         if ( caro[i][0] === caro[i][1] && caro[i][1] === caro[i][2] && caro[i][0]!=='.')
+             alert(`${caro[i][0]} thắng `)
      }
 
  }
+
+
 </script>
 
 </body>

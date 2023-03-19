@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+  let result = '';
+  let input = prompt('nhập')
+  for (let i = 0; i < input.length; i++) {
+    if ( LOWER.includes(input[i])){
+      result += input[i].toUpperCase()
+    } else {
+      result += input[i].toLowerCase()
+    }
+
+  }
+  alert(result)
+</script>
+</body>
+</html>

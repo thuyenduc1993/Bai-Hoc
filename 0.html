@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>TYPE ANYTHING SLOWLY </h3>
+<textarea rows="5"  id="ad" onkeydown="onChange()"></textarea>
+<script>
+  let text = 'tôi là uretrtretret'
+  let length = 0
+
+  function onChange(){
+      ++length;
+      let d = text.substring(0, length);
+      if (length > text.length) {
+          document.getElementById('ad').value = ""
+          length = 0
+      } else {
+          document.getElementById('ad').value = d
+      }
+  }
+</script>
+</body>
+</html>

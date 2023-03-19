@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B1</title>
+</head>
+<body>
+<script>
+  // let myColor = ["Red", "Green", "White", "Black"];
+  // let a= myColor.join(';')
+  // document.write(a)
+  // document.write(a)
+
+  let input = prompt('sNT')
+  let kt = input[0]
+  for (let i = 1; i < input.length; i++) {
+      if (input[i] %2 === 0 && input[i-1] % 2 === 0) {
+         kt += "-"
+
+      }
+      kt +=input[i]
+  }
+  document.write(kt)
+</script>
+</body>
+</html>

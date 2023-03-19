@@ -13,107 +13,119 @@
         </tr>
         <tr>
             <td>
-                <button class="button" onclick="play(1)" type="button">1</button>
+                <button class="button" onclick="press(1)" type="button">1</button>
             </td>
             <td>
-                <button class="button" onclick="play(2)" type="button">2</button>
+                <button class="button" onclick="press(2)" type="button">2</button>
             </td>
             <td>
-                <button class="button" onclick="play(3)" type="button">3</button>
+                <button class="button" onclick="press(3)" type="button">3</button>
             </td>
             <td>
-                <button class="operator" onclick="fnTinh('+')" type="button">+</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button class="button" onclick="play(4)" type="button">4</button>
-            </td>
-            <td>
-                <button class="button" onclick="play(5)" type="button">5</button>
-            </td>
-            <td>
-                <button class="button" onclick="play(6)" type="button">6</button>
-            </td>
-            <td>
-                <button class="button" onclick="fnTinh('-')" type="button">-</button>
+                <button class="operator" onclick="press('+')" type="button">+</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button class="button" onclick="play(7)" type="button">7</button>
+                <button class="button" onclick="press(4)" type="button">4</button>
             </td>
             <td>
-                <button class="button" onclick="play(8)" type="button">8</button>
+                <button class="button" onclick="press(5)" type="button">5</button>
             </td>
             <td>
-                <button class="button" onclick="play(9)" type="button">9</button>
+                <button class="button" onclick="press(6)" type="button">6</button>
             </td>
             <td>
-                <button class="button" onclick="fnTinh('*')" type="button">*</button>
+                <button class="button" onclick="press('-')" type="button">-</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button class="button" onclick="fnAC();" type="button">AC</button>
+                <button class="button" onclick="press(7)" type="button">7</button>
             </td>
             <td>
-                <button class="button" onclick="play(0)" type="button">0</button>
+                <button class="button" onclick="press(8)" type="button">8</button>
             </td>
             <td>
-                <button class="button" onclick="fnTinh('=')" type="button">=</button>
+                <button class="button" onclick="press(9)" type="button">9</button>
             </td>
             <td>
-                <button class="button" onclick="fnTinh('/')" type="button">/</button>
+                <button class="button" onclick="press('*')" type="button">*</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="button" onclick="fnAc();" type="button">AC</button>
+            </td>
+            <td>
+                <button class="button" onclick="press(0)" type="button">0</button>
+            </td>
+            <td>
+                <button class="button" onclick="fnTinh()" type="button">=</button>
+            </td>
+            <td>
+                <button class="button" onclick="press('/')" type="button">/</button>
             </td>
         </tr>
     </table>
 </div>
 </body>
 <script>
-    let s2 = false;
-    let b = "";
-    let a = "";
-    let phepTinh = "";
-
-    function fnAC() {
-        a = "";
-        b = "";
-        phepTinh = "";
-        s2 = false;
-        document.getElementById('result').value = "";
+    let result = document.getElementById('result');
+    function fnTinh(){
+        result.value = eval(result.value)
     }
 
-    function play(i) {
-        document.getElementById('result').value += String(i);
-        if (s2 == true) {
-            a += String(i);
-        } else {
-            b += String(i);
-        }
+    function press(key) {
+        result.value += key
     }
 
-    function fnTinh(i) {
-        document.getElementById('result').value += String(i);
-        if (i === '=') {
-            var so1 = parseFloat(a);
-            var so2 = parseFloat(b);
-            if (phepTinh == "-") {
-                document.getElementById('result').value = so1 - so2;
-            }
-            else if (phepTinh == "+") {
-                document.getElementById('result').value = so1 + so2;
-            }
-            else if (phepTinh == "*") {
-                document.getElementById('result').value = so1 * so2;
-            }
-            else if (phepTinh == "/") {
-                document.getElementById('result').value = so1 / so2;
-            }
-        } else {
-            s2 = true;
-            phepTinh = i;
-        }
+    function fnAc(){
+        result.value = ''
     }
+    // let s2 = false;
+    // let b = "";
+    // let a = "";
+    // let phepTinh = "";
+    //
+    // function fnAC() {
+    //     a = "";
+    //     b = "";
+    //     phepTinh = "";
+    //     s2 = false;
+    //     document.getElementById('result').value = "";
+    // }
+    //
+    // function play(i) {
+    //     document.getElementById('result').value += String(i);
+    //     if (s2 == true) {
+    //         a += String(i);
+    //     } else {
+    //         b += String(i);
+    //     }
+    // }
+    //
+    // function fnTinh(i) {
+    //     document.getElementById('result').value += String(i);
+    //     if (i === '=') {
+    //         var so1 = parseFloat(a);
+    //         var so2 = parseFloat(b);
+    //         if (phepTinh == "-") {
+    //             document.getElementById('result').value = so1 - so2;
+    //         }
+    //         else if (phepTinh == "+") {
+    //             document.getElementById('result').value = so1 + so2;
+    //         }
+    //         else if (phepTinh == "*") {
+    //             document.getElementById('result').value = so1 * so2;
+    //         }
+    //         else if (phepTinh == "/") {
+    //             document.getElementById('result').value = so1 / so2;
+    //         }
+    //     } else {
+    //         s2 = true;
+    //         phepTinh = i;
+    //     }
+    // }
 </script>
 </html>
