@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>B3</title>
 </head>
-<body>
-$END$
+<body onload="sumInput()">
+<script>
+    function sumInput ( input1 ,input2 ) {
+        if ( input1 <= input2){
+            return input1 + input2;
+        } else {
+            return (`${input1} nhỏ hơn ${input2}`);
+        }
+    }
+    let input1 = +prompt("nhập số vào");
+    let input2 = +prompt('nhập số vào');
+    alert(sumInput(input1, input2 ));
+</script>
 </body>
 </html>
