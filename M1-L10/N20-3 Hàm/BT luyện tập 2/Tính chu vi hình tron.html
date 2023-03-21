@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function acreage(radius) {
+        if (radius <= 0) {
+            return " không tồn tại đường tròn"
+        }
+        return radius * radius * 3.14;
+    }
+    let radius = +prompt("nhập bán kính đường tròn");
+    alert(acreage(radius));
+
+
+
+    // 'Chu vi đường tròn'
+    // function perimeter(radius) {
+    //     if (radius <= 0) {
+    //         return " không tồn tại đường tròn"
+    //     }
+    //     return (radius * 2 ) * 3.14;
+    // }
+    // let radius = +prompt("nhập bán kính đường tròn");
+    // alert(perimeter(radius));
+</script>
+</body>
+</html>

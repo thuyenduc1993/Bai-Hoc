@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(input, array){
+        for (let i = 0; i < array.length; i++) {
+            if (array[i]===input ) {
+                return `tìm thấy ${input} tại vị trí ${i}`;
+            }
+        }
+        return `không có trong mảng ${input}`;
+    }
+
+    let array = [1,2,3,4,5,6,7,8,9,10,4,5,2,7,8,3,7,8,3,7,43,5,7];
+    let input = prompt('nhập vào');
+    alert(check(parseInt(input), array));
+  // function check(array){
+  //   for (let i = 0; i < str.length; i++) {
+  //     if (array[i] === input) {
+  //          return location+=array[i];
+  //     }
+  //     return `không có trong mảng ${-1}`;
+  //   }
+  // }
+  // let location1= prompt("nhập số cần kiểm tra");
+  // let location = []
+  // alert(check())
+
+
+
+  // function check(input,array) {
+  //     for (let i = 0; i < array.length; i++) {
+  //         if (array[i]===input ) {
+  //             return location +=array[i];
+  //         }
+  //     }
+  //     return `không có trong mảng ${-1}`;
+  // }
+  // let location =0
+  // let array = [1,2,3,4,5,6,7,8,9,10,4,5,2,7,8,3,7,8,3,7,43,5,7,]
+  // let input1  = +prompt('nhập vào')
+  // alert(check((input1 ),array))
+</script>
+</body>
+</html>

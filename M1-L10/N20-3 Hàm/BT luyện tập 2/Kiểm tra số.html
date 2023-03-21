@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B4</title>
+</head>
+<body onload="check()">
+<script>
+    function check(input) {
+        if (isNaN(input)) {
+            return 'không phải ký tự số';
+        }
+        return " là ký tự số"
+    }
+    let arr = prompt(" nhập vào để kiểm tra");
+    alert( `${arr} là ${check(arr)} ` )
+</script>
+</body>
+</html>

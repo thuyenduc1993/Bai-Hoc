@@ -1,4 +1,4 @@
-imgplay = document.getElementById("image");
+
 function init() {
     imgplay = document.getElementById("image");
     imgplay.style.position = ('relative');

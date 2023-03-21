@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B6</title>
+</head>
+<body onload="check()">
+<script>
+  function check (number) {
+      if (isNaN(number) > 0) {
+      return true
+    }
+    return false
+  }
+  let input = +prompt("nhập số cần kiểm tra");
+  alert(check(input))
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B5</title>
+</head>
+<body onload="check()">
+<script>
+    function check(number1,number2,number3) {
+        if ( number1 < number2 && number1 < number3 ) {
+            return `${number1} là số nhỏ nhất`;
+        } else if (number2<number3) {
+            return `${number2} là số nhỏ nhất`;
+        }
+        return `${number3} là số nhỏ nhất`;
+    }
+    let input1 = +prompt("nhập số cần so sánh");
+    let input2 = +prompt("nhập số cần so sánh");
+    let input3 = +prompt("nhập số cần so sánh");
+   alert(check(input1,input2,input3));
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B3</title>
+</head>
+<body>
+<script>
+    function factorial(number) {
+            if ( number === 0 || number === 1 ) {
+                return 1;
+            }
+            return number * factorial(number-1);
+        }
+    let a = +prompt('nhập số giai thừa');
+    alert(factorial(a));
+</script>
+</body>
+</html>
