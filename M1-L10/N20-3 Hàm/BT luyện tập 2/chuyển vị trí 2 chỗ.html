@@ -7,11 +7,14 @@
 <body>
 <script>
   function changeplaces (x,y) {
-    alert(`${y},${x}`)
+    return [y,x]
   }
   let number1 = + prompt("nhập số vào");
   let number2 = + prompt("nhập số vào");
-  changeplaces(number1,number2);
+  [number1,number2] = changeplaces(number1,number2);
+  alert(number1)
+  alert(number2)
+
 </script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TT2</title>
+</head>
+<body>
+<script>
+  class Circle {
+    radius;
+    color;
+    constructor(radius,color) {
+      this.radius = radius;
+      this.color = color;
+    }
+    getRadius() {
+        return this.radius;
+    }
+    getArea() {
+        return this.radius * this.radius * Math.PI;
+    }
+  }
+  let new_Circle = new Circle(2,'red');
+  console.log (new_Circle);
+  console.log(new_Circle.getArea())
+
+
+</script>
+</body>
+</html>

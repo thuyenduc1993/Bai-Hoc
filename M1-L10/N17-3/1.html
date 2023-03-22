@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt('nhập mảng vào').split(",");
+    let input = prompt("nhập vào");
+    let index = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]===input) {
+            index.push(i)
+            break
+        } else {
+            alert(" không thấy tra về giá tị -1")
+        }
+    }
+    alert(index)
+
+
+</script>
+</body>
+</html>

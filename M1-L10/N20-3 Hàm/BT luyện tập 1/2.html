@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>B2</title>
 </head>
-<body>
+<body onload="increaseNumber(num)">
 <script>
     function increaseNumber(num){
         num +=1
         return num
     }
     let num = +prompt('nhập số vào đây')
-    document.write(increaseNumber(num));
+    alert(increaseNumber(num));
 </script>
 </body>
 </html>
