@@ -30,14 +30,15 @@ class FlashLamp {
     }
     Light(){
         if (this.status) {
-            return  "Lighting";
+            alert("Lighting");
+        }else {
+           alert("Not lighting");
         }
-        return "Not lighting"
     }
     TurnOn() {
             return this.status = true;
     }
-    Turnof() {
+    Turnoff() {
            return this.status = false;
     }
 }
@@ -45,13 +46,13 @@ let battery = new Battery(true);
 battery.setEnergy(50);
 let flashLamp = new FlashLamp();
 flashLamp.setBattery(battery);
-document.write(flashLamp.getBatteryInfo());
+document.write(`Tình trang pin:${flashLamp.getBatteryInfo()}` + "<br/>");
 flashLamp.Light();
 document.write( " Đang bật : <br/>")
 flashLamp.TurnOn();
 flashLamp.Light();
-document.write("Tình trang pin" +' : '+ flashLamp.getBatteryInfo() + "<br/>");
+document.write(`Tình trang pin : ${flashLamp.getBatteryInfo()}` + "<br/>");
 
 document.write("Đang tắt<br/>")
-flashLamp.Turnof();
+flashLamp.Turnoff();
 flashLamp.Light();
