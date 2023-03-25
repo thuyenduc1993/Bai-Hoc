@@ -90,8 +90,8 @@ class Mobile {
     }
 }
 
-const nokia = new Mobile();
-const iphone = new Mobile();
+let nokia = new Mobile();
+let iphone = new Mobile();
 
 nokia.turnOn();
 nokia.createMessage('Hello iPhone!');
