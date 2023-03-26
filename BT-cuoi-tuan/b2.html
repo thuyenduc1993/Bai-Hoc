@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function findTriplet(arr, sum) {
+    for (let i = 0; i < arr.length - 2; i++) {
+      for (let j = i + 1; j < arr.length - 1; j++) {
+        for (let k = j + 1; k < arr.length; k++) {
+          if (arr[i] + arr[j] + arr[k] == sum) {
+            return [arr[i], arr[j], arr[k]];
+          }``
+        }
+      }
+    }
+
+    return "Không tìm thấy bộ ba số nào có tổng bằng " + sum;
+  }
+
+  let arr = [1, 4, 5, 6, 8, 9];
+  let sum = 15;
+  let triplet = findTriplet(arr, sum);
+  console.log(triplet);
+</script>
+</body>
+</html>

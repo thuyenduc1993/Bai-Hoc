@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function f(x) {
+        return Math.sin(x);
+    }
+    function findMaxInRange(a, b) {
+        let max = -Infinity;
+        for (let x = a; x <= b; x += 0.1) {
+            let y = f(x);
+            if (y > max) {
+                max = y;
+            }
+        }
+        return max;
+    }
+
+    let a = 0;
+    let b = Math.PI;
+    let max = findMaxInRange(a, b);
+    console.log("Giá trị lớn nhất của hàm số f(x) trong khoảng [" + a + ", " + b + "] là: " + max);
+</script>
+</body>
+</html>
