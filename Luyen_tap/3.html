@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function checkString(string1,string2){
+    if(string1.length<=string2.length){
+      let str = string2.split(string1);
+      if(str == string2){
+        return false;
+      } else {
+        for (let i = 0; i <str.length ; i++) {
+          if(str[i]==string1){
+            return false;
+          }
+        } return true;
+      }
+    } else return false;
+  }
+
+  console.log(checkString('codegym','codegymhere'));
+</script>
+</body>
+</html>b

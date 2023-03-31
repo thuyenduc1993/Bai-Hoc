@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMax(scores) {
+        let max = scores[0];
+        let secondMax = scores[1];
+
+        for (let i = 2; i < scores.length; i++) {
+            if (scores[i] > max) {
+                secondMax = max;
+                max = scores[i];
+            } else if (scores[i] > secondMax) {
+                secondMax = scores[i];
+            }
+        }
+
+        return secondMax;
+    }
+</script>
+</body>
+</html>

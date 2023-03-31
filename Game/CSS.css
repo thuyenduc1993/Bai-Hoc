@@ -1,0 +1,11 @@
+.Img{
+    background-image:url('img.jpg');
+    background-size: cover;
+    width: 1000px;
+    height: 600px;
+    margin-left: 300px;
+}
+.score{
+    margin-left: 300px;
+    margin-top: auto;
+}
