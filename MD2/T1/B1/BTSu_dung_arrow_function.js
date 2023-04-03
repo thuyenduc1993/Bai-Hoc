@@ -50,7 +50,15 @@ const inventory = [
 // console.log(totalMachineValue);
 
 
-let totalMachineValue = inventory
-    .filter((item)=>item.type=== "machine")
-    .reduce((sum,item)=>sum+item.value,0);
-console.log(totalMachineValue);
+// let totalMachineValue = inventory
+//     .filter((item)=>item.type=== "machine")
+//     .reduce((sum,item)=>sum+item.value,0);
+// console.log(totalMachineValue);
+
+const numbers = [1, 2, 3, 4, 5];
+
+const filteredNumbers = numbers.filter((number) =>{
+    return number % 2 === 0;
+});
+
+console.log(filteredNumbers); // [2, 4]
