@@ -4,7 +4,7 @@ let ctx = canvas.getContext('2d');
 let ball = {
     x: 200,
     y: 200,
-    dx: 9,
+    dx: 8,
     dy: 2,
     radius :10
 }
@@ -39,16 +39,16 @@ let MaxScore = BrickConfig.totalCol * BrickConfig.totalRow;
 
 // Di chuyển thanh ngang
 document.addEventListener('keydown', function (event) {
-    if (event.keyCode == 37) {
+    if (event.keyCode === 37) {
         bars.isMovingLeft = true;
-    } else if (event.keyCode == 39) {
+    } else if (event.keyCode === 39) {
         bars.isMovingRight = true;
     }
 })
 document.addEventListener('keyup', function (event) {
-    if (event.keyCode == 37) {
+    if (event.keyCode === 37) {
         bars.isMovingLeft = false;
-    } else if (event.keyCode == 39) {
+    } else if (event.keyCode === 39) {
         bars.isMovingRight = false;
     }
 })
@@ -96,7 +96,7 @@ for ( let i = 0; i < BrickConfig.totalRow; i++) {
 
 }
 
-
+// bóng trúng thanh
 function theBallHitsTheBar() {
     if (ball.x + ball.radius >= bars.x && ball.x + ball.radius <= bars.x + bars.width &&
         ball.y + ball.radius >= canvas.height - bars.height) {
@@ -104,7 +104,7 @@ function theBallHitsTheBar() {
     }
 
 }
-
+//bóng trúng gạch
 function handleBallCollideBricks() {
     BrickList.forEach(function (b) {
         if (!b.isBroken) {
@@ -122,7 +122,7 @@ function handleBallCollideBricks() {
         }
     })
 }
-
+// giới hạn bong
     function updatePaddlePosition() {
     if (bars.isMovingLeft) {
         bars.x -= bars.speed;
@@ -135,7 +135,6 @@ function handleBallCollideBricks() {
         bars.x = canvas.width - bars.width;
     }
 }
-// xử lý bóng Va chạm giới hạn
 function handleBallCollideBounds() {
     if (ball.x < ball.radius || ball.x > canvas.width - ball.radius) {
         ball.dx = -ball.dx;
@@ -144,7 +143,6 @@ function handleBallCollideBounds() {
         ball.dy = -ball.dy
     }
 }
-// vị trí của quả bóng
 function updateBallPosition() {
     ball.x += ball.dx;
     ball.y += ball.dy;
