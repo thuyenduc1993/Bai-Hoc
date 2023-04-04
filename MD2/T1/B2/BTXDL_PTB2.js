@@ -14,10 +14,10 @@ class QuadraticEquation {
           return  this.b *this.b - 4 * this.a * this.c ;
     }
     getRoot1(){
-        return ((-this.b + Math.sqrt(this.getDiscriminant()))) / ( 2 * this.a);
+        return (-this.b + Math.sqrt(this.getDiscriminant())) / ( 2 * this.a);
     }
     getRoot2(){
-        return ((-this.b - Math.sqrt(this.getDiscriminant()))) / (2 * this.a);
+        return (-this.b - Math.sqrt(this.getDiscriminant())) / (2 * this.a);
     }
 }
 let index = new QuadraticEquation( 3,8,1);
@@ -29,4 +29,3 @@ if(delta >= 0) {
 }else {
     console.log(`The equation has no roots`)
 }
-console.log(delta)
