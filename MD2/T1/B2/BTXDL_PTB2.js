@@ -11,7 +11,7 @@ class QuadraticEquation {
         return `${this.a}, ${this.b}, ${this.c}`;
     }
     getDiscriminant(){
-          return  this.b * 2 - 4 * this.a * this.c ;
+          return  this.b *this.b - 4 * this.a * this.c ;
     }
     getRoot1(){
         return ((-this.b + Math.sqrt(this.getDiscriminant()))) / ( 2 * this.a);
