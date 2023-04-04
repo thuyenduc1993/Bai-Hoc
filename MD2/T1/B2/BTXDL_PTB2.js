@@ -21,11 +21,21 @@ class QuadraticEquation {
     }
 }
 let index = new QuadraticEquation( 3,8,1);
-let delta = index.getDiscriminant();
-if(delta >= 0) {
-    console.log(`Phương trình có 2 nghiệm ${index.getRoot1()} và ${index.getRoot2()}`);
-} else if(delta === 0) {
-    console.log(`Phương trình có 1 nghiệm ${index.getRoot1()}`)
-}else {
-    console.log(`The equation has no roots`)
+// let delta = index.getDiscriminant();
+// if(delta >= 0) {
+//     console.log(`Phương trình có 2 nghiệm ${index.getRoot1()} và ${index.getRoot2()}`);
+// } else if(delta === 0) {
+//     console.log(`Phương trình có 1 nghiệm ${index.getRoot1()}`)
+// }else {
+//     console.log(`The equation has no roots`)
+// }
+function delta(index) {
+    if (index.getDiscriminant()>0) {
+        console.log(`Phương trình có 2 nghiệm ${index.getRoot1()} và ${index.getRoot2()}`);
+    }else if (index.getDiscriminant()===0) {
+        console.log(`Phương trình có 1 nghiệm ${index.getRoot1()}`);
+    }else {
+        console.log(`The equation has no roots`);
+    }
 }
+delta(index)
