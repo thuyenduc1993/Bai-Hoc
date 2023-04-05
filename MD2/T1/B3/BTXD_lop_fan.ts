@@ -4,10 +4,10 @@ enum Speed {
     FAST,
 }
 class Fan {
-    speed = Speed.SLOW;
-    on : boolean;
-    radius : number;
-    color : string;
+    private speed = Speed.SLOW;
+    private on : boolean;
+    private radius : number;
+    private color : string;
     constructor() {
     }
     getSpeed() {
