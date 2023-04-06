@@ -10,9 +10,9 @@ export class EmployeeManager {
         EmployeeManager.employees.push(employee);
     }
     delete(index){
-        EmployeeManager.employees.splice(1,1)
+        EmployeeManager.employees.splice(index,1)
     }
     editName(index:number,new_name){
-        EmployeeManager.employees[index].name= new_name
+        EmployeeManager.employees[index].setName(new_name)
     }
 }

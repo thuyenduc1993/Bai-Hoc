@@ -9,9 +9,7 @@ let employeeManager= new EmployeeManager();
 employeeManager.setAdd(employee);
 employeeManager.setAdd(employee1);
 employeeManager.setAdd(employee2);
-// console.table(employeeManager.getAll());
+
 // employeeManager.delete(1);
-// console.table((employeeManager.getAll()))
-console.table((employeeManager.getAll()))
-employeeManager.editName(1, 'tu')
+employeeManager.editName(1, 'Tú')
 console.table((employeeManager.getAll()))
