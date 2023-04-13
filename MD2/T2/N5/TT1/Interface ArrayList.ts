@@ -1,7 +1,6 @@
-export interface ArrayList{
-    size();
-    add();
-    get();
-    remove();
-
+export interface InterfaceArrayList<T> {
+    add(data: T): void;
+    get(index: number): T;
+    size(): number;
+    remove(): void;
 }
