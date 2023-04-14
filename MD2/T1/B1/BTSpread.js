@@ -9,13 +9,14 @@
 
 
 
-// let replace = ((array, from, to, elements) => {
-//      return  array.splice(from, to - from, ...elements)
-// })
-// let testArray = [1, 2, 100, 100, 6]
-// replace(testArray, 2, 4, [3, 4, 5])
-// console.log(testArray)
-//
+let replace = ((array, from, to, elements) => {
+    let arr =array;
+     return  arr.splice(from, to - from, ...elements)
+})
+let testArray = [1, 2, 100, 100, 6]
+replace(testArray, 2, 4, [3, 4, 5])
+console.log(testArray)
+
 
 
 
@@ -46,9 +47,9 @@
 // console.log(customerOrder)
 
 
-let customerOrder = [];
-let  recordOrders = (time, ...birds) =>{
-    return customerOrder.push({ time, birds });
-}
-recordOrders(new Date, "coffee", "yaourt", "pizza");
-console.log(customerOrder);
+// let customerOrder = [];
+// let  recordOrders = (time, ...birds) =>{
+//     return customerOrder.push({ time, birds });
+// }
+// recordOrders(new Date, "coffee", "yaourt", "pizza");
+// console.log(customerOrder);

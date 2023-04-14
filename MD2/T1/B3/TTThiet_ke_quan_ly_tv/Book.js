@@ -2,18 +2,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Book = void 0;
 var Book = /** @class */ (function () {
-    function Book(ID, name) {
+    function Book(ID, Name) {
         this.ID = ID;
-        this.name = name;
+        this.Name = Name;
     }
     Book.prototype.getName = function () {
-        return this.name;
-    };
-    Book.prototype.setName = function (name) {
-        this.name = name;
+        return this.Name;
     };
     Book.prototype.getID = function () {
         return this.ID;
+    };
+    Book.prototype.setName = function (name) {
+        this.Name = name;
     };
     return Book;
 }());

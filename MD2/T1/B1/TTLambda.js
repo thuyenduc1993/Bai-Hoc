@@ -2,8 +2,8 @@ let arr = [1,2,3,4,5,6,7];
 let square = (item) => item * item;
 function arraySq(func,arr) {
     let newArr = [];
-    arr.forEach((alo) => {
-        newArr.push(func(alo));
+    arr.forEach((item) => {
+        newArr.push(func(item));
     });
     return  newArr;
 }

@@ -29,11 +29,12 @@ export class Triangle extends Shape{
     setSide3(value:number){
         this.side3 = value;
     }
+    perimeter():number{
+        return this.side1 + this.side2 + this.side3;
+    }
     area():number{
         let p = this.perimeter();
         return p * ((p - this.side1) * (p - this.side2) * (p - this.side3));
     }
-    perimeter():number{
-        return this.side1 + this.side2 + this.side3;
-    }
+
 }

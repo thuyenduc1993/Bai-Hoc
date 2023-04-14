@@ -9,7 +9,7 @@
     "strict": true,
     "types": [
       "reflect-metadata",
-      "jest"   /* Chú ý ở đây phải có cài này không file .ts sẽ báo lỗi */
+      "jest"
     ],
     "esModuleInterop": true,
     "module": "commonjs",

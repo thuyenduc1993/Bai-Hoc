@@ -1,45 +1,42 @@
 import {Book} from "./Book";
 
+
 export class BookManager {
-    books: Book[] = [];
+    book: Book[] = [];
 
     constructor() {
     }
 
-    add(book: Book): void {
-        this.books.push(book)
+    add(books: Book): void {
+        this.book.push(books);
     }
 
-    getList(): Book[] {
-        return this.books
+    getList() {
+        return this.book;
     }
 
-    delete(ID: string): void {
-        let indexBookDelete = this.findBook(ID);
-        if (indexBookDelete != -1) {
-            this.books.splice(indexBookDelete, 1);
-        } else {
-            throw new Error('delete error')
-        }
-    }
-
-    update(ID: string, name: string) {
-        let indexBookUpdate = this.findBook(ID);
-        if (indexBookUpdate != -1) {
-            this.books[indexBookUpdate].setName(name);
-        } else {
-            throw new Error('update error')
-        }
-    }
-
-    findBook(ID: string) {
-        let i = -1;
-        this.books.forEach((book,  index) => {
-            if (book.ID === ID) {
-                i = index;
+    findBook(Id: string) {
+        let i = 0;
+        this.book.forEach((book, index) => {
+            if (book.ID === Id) {
+                i = index
             }
         })
+        return i
+    }
 
-        return i;
+    deleter(ID: string) {
+        if (this.findBook(ID) != -1) {
+            this.book.splice(this.findBook(ID), 1);
+        }else {
+            throw new Error
+        }
+    }
+    update(ID: string,name:string){
+        if(this.findBook(ID) !-1 ){
+            this.book[this.findBook(ID)].setName(name);
+        }else {
+            throw new Error
+        }
     }
 }

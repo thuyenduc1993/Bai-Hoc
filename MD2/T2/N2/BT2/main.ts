@@ -14,6 +14,6 @@ arr.forEach((item)=>{
         console.log(`diện tích vuông = ${item.Area()}`)
     }else {
         console.log(`diên tích hình tròn =  ${circle.Area()}`);
-        console.log(`diên tích hình chữ nhật = ${rectangle.Area()}`);
+        console.log(`diên tích hình chữ nhật  ${rectangle.Area()}`);
     }
 })

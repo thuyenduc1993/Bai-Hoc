@@ -16,8 +16,7 @@ export class Calculator {
                     return firstOperand / secondOperand;
                 else
                     console.log("Can not divide by 0");
-                default:
-                console.log("Unsupported operation");
+                    console.log("Unsupported operation");
         }
     }
 }

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var StudentScore_1 = require("./StudentScore");
+var studentScore = new StudentScore_1.StudentScore();
+studentScore.insertFirst("BVD", 8);
+studentScore.insertFirst("BVD1", 9);
+studentScore.insertFirst("BVD4", 3);
+studentScore.insertLast("BVD2", 7);
+studentScore.insertLast("BVD3", 6);
+console.log(studentScore.getSize());
+console.table(studentScore.showList());
